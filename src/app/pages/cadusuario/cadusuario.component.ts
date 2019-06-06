@@ -32,6 +32,7 @@ export class CadUsuarioComponent implements OnInit {
     })
     let id = this.route.snapshot.params.id;
     if (id != null){
+      //metodo buscar
       this.usuarioService.buscar(id).subscribe((user)=> {
         this.usuario = user;
         this.form.patchValue(this.usuario);
